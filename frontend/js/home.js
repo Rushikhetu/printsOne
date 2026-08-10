@@ -1,5 +1,17 @@
 // ================= SIMPLE UI INTERACTIONS =================
+const API_BASE = 'https://printsone-backend.onrender.com';
 
+async function testBackend() {
+    try {
+        const response = await fetch(`${API_BASE}/`);
+        const data = await response.text();
+        console.log(data);
+    } catch (err) {
+        console.error('Backend connection failed:', err);
+    }
+}
+
+testBackend();
 // Wishlist toggle
 document.querySelectorAll('.wishlist-btn').forEach(btn => {
     btn.addEventListener('click', () => {
