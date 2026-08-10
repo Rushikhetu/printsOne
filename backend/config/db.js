@@ -1,17 +1,16 @@
 const mysql = require('mysql2');
 
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'RUSHI123@MariaDB',
-    database: 'printsone_db',
-    port: 3306
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT || 3306
 });
 
 db.connect((err) => {
     if (err) {
-        console.error('❌ MariaDB Connection Failed');
-        console.error(err.message);
+        console.error('❌ MariaDB Connection Failed:', err.message);
     } else {
         console.log('✅ MariaDB Connected Successfully');
     }
