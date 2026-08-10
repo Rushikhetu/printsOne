@@ -1,0 +1,11 @@
+{
+  "name": "printsone",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mysql2": "^3.23.2",
+    "nodemon": "^3.1.14"
+  }
+}

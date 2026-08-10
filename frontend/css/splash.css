@@ -1,0 +1,328 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#fff;
+    font-family:sans-serif;
+}
+
+/* ===========================
+   SPLASH
+=========================== */
+
+#splash{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fff;
+    z-index:9999;
+}
+
+.logoContainer{
+    position:relative;
+    width:420px;
+    height:420px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ===========================
+   SVG
+=========================== */
+
+.circleSVG{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.ring{
+    fill:none;
+    stroke:#111;
+    stroke-width:6;
+}
+
+#drawCircle{
+    fill:none;
+    stroke:#000;
+    stroke-width:8;
+    stroke-linecap:round;
+    stroke-dasharray:1260;
+    stroke-dashoffset:1260;
+    filter:drop-shadow(0 0 12px black);
+    animation:drawCircle 2.2s linear forwards;
+}
+
+@keyframes drawCircle{
+    to{
+        stroke-dashoffset:0;
+    }
+}
+
+/* ===========================
+   GOLD RUNNER
+=========================== */
+
+#runner{
+    fill:#000;
+    filter:drop-shadow(0 0 12px black);
+    animation:runnerSpin 2.2s linear forwards;
+    transform-origin:300px 300px;
+}
+
+@keyframes runnerSpin{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo{
+
+    width:230px;
+
+    opacity:0;
+
+    transform:scale(.2);
+
+    animation:
+
+    logoShow .7s ease forwards,
+
+    hoverLogo 2.6s ease-in-out infinite;
+
+    animation-delay:
+
+    2.2s,
+
+    3s;
+
+}
+
+@keyframes logoShow{
+
+    0%{
+
+        opacity:0;
+
+        transform:scale(.2);
+
+    }
+
+    70%{
+
+        opacity:1;
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes hoverLogo{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   SHINE
+=========================== */
+
+.shine{
+
+    position:absolute;
+
+    width:80px;
+
+    height:280px;
+
+    background:linear-gradient(
+
+    to right,
+
+    transparent,
+
+    rgba(255,255,255,.95),
+
+    transparent);
+
+    transform:rotate(25deg);
+
+    left:-120px;
+
+    opacity:0;
+
+    animation:shine 1s linear forwards;
+
+    animation-delay:3.2s;
+
+}
+
+@keyframes shine{
+
+    0%{
+
+        left:-120px;
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        left:430px;
+
+        opacity:0;
+
+    }
+
+}
+
+/* ===========================
+   BACKGROUND GLOW
+=========================== */
+
+.logoContainer::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+    rgba(255,193,7,.22),
+
+    transparent 70%);
+
+    filter:blur(40px);
+
+    animation:pulse 3s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(.9);
+
+        opacity:.5;
+
+    }
+
+    50%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(.9);
+
+        opacity:.5;
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.logoContainer{
+
+    width:300px;
+
+    height:300px;
+
+}
+
+.logo{
+
+    width:170px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.logoContainer{
+
+    width:240px;
+
+    height:240px;
+
+}
+
+.logo{
+
+    width:140px;
+
+}
+
+}
