@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:5000/api/auth";
+const API_URL = "https://printsone-backend.onrender.com/api/auth";
 
 const signupForm = document.getElementById('signupForm');
 
