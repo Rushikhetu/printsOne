@@ -1,23 +1,25 @@
+require('dotenv').config();
+require('./config/db');
+
 const express = require('express');
 const cors = require('cors');
 
+const authRoutes = require('./routes/authRoutes');
+
 const app = express();
 
-app.use(cors());
+// Allow frontend requests
+app.use(cors({
+    origin: '*'
+}));
+
 app.use(express.json());
 
-// Home route
 app.get('/', (req, res) => {
     res.send('🚀 PrintsOne Backend Running 24x7');
 });
 
-// Health check route
-app.get('/health', (req, res) => {
-    res.json({
-        success: true,
-        message: 'PrintsOne backend is live'
-    });
-});
+app.use('/api/auth', authRoutes);
 
 const PORT = process.env.PORT || 5000;
 

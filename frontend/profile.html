@@ -1,1 +1,83 @@
-<!DOCTYPE html><html><body><h2>Profile</h2></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/logos/logos.png">
+    <title>My Profile - PrintsOne</title>
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+
+    <div class="profile-container">
+
+        <aside class="sidebar">
+            <img src="assets/logo/logo.png" class="logo" />
+            <h2>Prints<span>One</span></h2>
+
+            <ul>
+                <li class="active"><i class="fa-solid fa-user"></i> My Profile</li>
+                <li><i class="fa-solid fa-box"></i> My Orders</li>
+                <li><i class="fa-solid fa-wallet"></i> My Wallet</li>
+                <li><i class="fa-solid fa-location-dot"></i> Addresses</li>
+                <li><i class="fa-solid fa-gear"></i> Settings</li>
+            </ul>
+
+            <button class="logout-btn" onclick="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i> Logout
+            </button>
+        </aside>
+
+        <main class="profile-content">
+            <div class="topbar">
+                <h1>My Profile</h1>
+            </div>
+
+            <div class="profile-card">
+                <div class="avatar-section">
+                    <div id="avatarCircle" class="avatar-circle">R</div>
+                </div>
+
+                <div class="info-section">
+                    <h2 id="profileName">User Name</h2>
+                    <p id="profilePhone">+91 9876543210</p>
+                    <p id="profileEmail">user@gmail.com</p>
+
+                    <button class="edit-btn">
+                        <i class="fa-solid fa-pen"></i> Edit Profile
+                    </button>
+                </div>
+            </div>
+
+            <div class="personal-info">
+                <h2>Personal Information</h2>
+
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span>Full Name</span>
+                        <p id="fullName">-</p>
+                    </div>
+
+                    <div class="info-item">
+                        <span>Email Address</span>
+                        <p id="emailAddress">-</p>
+                    </div>
+
+                    <div class="info-item">
+                        <span>Mobile Number</span>
+                        <p id="mobileNumber">-</p>
+                    </div>
+
+                    <div class="info-item">
+                        <span>Address</span>
+                        <p>Belagavi, Karnataka, India</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

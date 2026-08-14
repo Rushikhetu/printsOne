@@ -1,1 +1,70 @@
-<!DOCTYPE html><html><body><h2>Signup</h2></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/logos/logos.png">
+    <title>Sign Up - PrintsOne</title>
+    <link rel="stylesheet" href="css/signup.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+
+    <div class="signup-container">
+        <div class="signup-card">
+
+            <h1>Create Your Account</h1>
+            <p>Sign up to get started with PrintsOne</p>
+
+            <form id="signupForm">
+
+                <div class="input-box">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" id="name" placeholder="Full Name" required />
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Email Address" required />
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" id="phone" placeholder="Mobile Number" required />
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password" required />
+                    <i class="fa-regular fa-eye eye-toggle" id="togglePassword"></i>
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+                    <i class="fa-regular fa-eye eye-toggle" id="toggleConfirmPassword"></i>
+                </div>
+
+                <div class="terms">
+                    <input type="checkbox" id="agree" required />
+                    <label for="agree">
+                        I agree to the <a href="#">Terms & Conditions</a>
+                        and <a href="#">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="signup-btn">Sign Up</button>
+            </form>
+
+            <div class="divider"><span>or</span></div>
+
+            <p class="login-text">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/signup.js"></script>
+</body>
+</html>

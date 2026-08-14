@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="assets/logos/logo.png">
+    <link rel="icon" type="image/png" href="assets/logos/logos.png">
     <title>PrintsOne</title>
 
     <link rel="stylesheet" href="css/home.css">
@@ -22,7 +22,7 @@
 
     <ul class="nav-links">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Mobile Covers</a></li>
+        <li><a href="mobile-cover.html">Mobile Covers</a></li>
         <li><a href="#">Stickers</a></li>
         <li><a href="#">Bouquets</a></li>
         <li><a href="#">Posters</a></li>
@@ -39,10 +39,15 @@
             Cart
         </div>
 
-        <div class="action-item">
-            <i class="fa-regular fa-user"></i>
-            Login / Signup
-        </div>
+        <div class="nav-actions">
+    <a href="login.html" id="loginLink" class="login-link">
+        Login / Signup
+    </a>
+
+    <div id="profileCircle" class="profile-circle" style="display:none;">
+        R
+    </div>
+</div>
 
     </div>
 </header>
@@ -334,6 +339,6 @@
 
 <!-- ================= JS ================= -->
 <script src="js/home.js"></script>
-
+<script src="js/homeProfile.js"></script>
 </body>
 </html>

@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    margin:0;
+    padding:0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:url('../assets/images/home-bg.png') center/cover no-repeat fixed;
+    position:relative;
+    font-family:'Poppins',sans-serif;
+}
+
+body::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(255,255,255,0.45);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+    z-index:0;
+}
+.signup-card{
+    width:100%;
+    padding:40px;
+
+    /* Light glass effect */
+    background:rgba(255,255,255,0.88);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,0.7);
+    border-radius:28px;
+
+    box-shadow:0 12px 40px rgba(0,0,0,0.14);
+}
+
+.signup-card h1{
+    text-align:center;
+    font-size:38px;
+    color:#111827;
+    margin-bottom:10px;
+}
+
+.signup-card p{
+    text-align:center;
+    color:#6b7280;
+    margin-bottom:28px;
+}
+
+.input-box{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    border:1px solid #d1d5db;
+    border-radius:16px;
+    padding:16px;
+    margin-bottom:18px;
+    background:rgba(255,255,255,0.78);
+}
+
+.input-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    font-size:16px;
+    background:transparent;
+}
+
+.input-box i{
+    color:#6b7280;
+}
+
+.eye-toggle{
+    cursor:pointer;
+}
+
+.terms{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    margin-bottom:24px;
+    font-size:14px;
+    color:#4b5563;
+}
+
+.terms a{
+    color:#6d28d9;
+    text-decoration:none;
+}
+.signup-btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:18px;
+    background:linear-gradient(135deg,#5b21ff,#7c3aed,#6d28d9);
+    color:white;
+    font-size:20px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.signup-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(109,40,217,0.35);
+}
+
+.divider{
+    display:flex;
+    align-items:center;
+    margin:28px 0;
+}
+
+.divider::before,
+.divider::after{
+    content:'';
+    flex:1;
+    height:1px;
+    background:#e5e7eb;
+}
+
+.divider span{
+    padding:0 16px;
+    color:#6b7280;
+}
+
+.login-text{
+    text-align:center;
+}
+
+.login-text a{
+    color:#6d28d9;
+    font-weight:600;
+    text-decoration:none;
+}

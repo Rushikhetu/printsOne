@@ -1,0 +1,121 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#0f172a;
+}
+
+.customizer-page{
+    display:grid;
+    grid-template-columns:320px 1fr 300px;
+    gap:24px;
+    padding:32px;
+    max-width:1400px;
+    margin:auto;
+}
+
+.left-panel,.preview-panel,.right-panel{
+    background:#fff;
+    border-radius:24px;
+    padding:24px;
+    box-shadow:0 4px 20px rgba(0,0,0,.06);
+}
+
+.left-panel h2{
+    font-size:18px;
+    margin-bottom:14px;
+    margin-top:22px;
+}
+
+select{
+    width:100%;
+    padding:14px;
+    border:1px solid #dbe4ee;
+    border-radius:14px;
+    font-size:15px;
+}
+
+.cover-types{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.cover-types button{
+    padding:14px;
+    border:1px solid #dbe4ee;
+    border-radius:16px;
+    background:#fff;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.cover-types .active{
+    border-color:#6d28d9;
+    background:#f3e8ff;
+    color:#5b21b6;
+}
+
+.upload-btn,.cart-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:16px;
+    background:linear-gradient(135deg,#5b21ff,#7c3aed);
+    color:#fff;
+    font-weight:700;
+    cursor:pointer;
+    margin-top:14px;
+}
+
+.buy-btn{
+    width:100%;
+    padding:15px;
+    border:2px solid #6d28d9;
+    border-radius:16px;
+    background:#fff;
+    color:#6d28d9;
+    font-weight:700;
+    cursor:pointer;
+    margin-top:12px;
+}
+
+.phone-preview{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:650px;
+}
+
+.phone-preview img{
+    max-width:100%;
+    width:340px;
+    border-radius:42px;
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+
+.price-box p{
+    display:flex;
+    justify-content:space-between;
+    margin:14px 0;
+}
+
+.total{
+    font-size:22px;
+    font-weight:700;
+}
+
+@media (max-width: 1024px){
+    .customizer-page{
+        grid-template-columns:1fr;
+    }
+
+    .phone-preview{
+        min-height:auto;
+    }
+}

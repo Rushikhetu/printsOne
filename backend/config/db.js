@@ -1,3 +1,4 @@
+require('dotenv').config();
 const mysql = require('mysql2');
 
 const db = mysql.createConnection({
@@ -10,9 +11,9 @@ const db = mysql.createConnection({
 
 db.connect((err) => {
     if (err) {
-        console.error('❌ MariaDB Connection Failed:', err.message);
+        console.error('❌ DB Connection Failed:', err.message);
     } else {
-        console.log('✅ MariaDB Connected Successfully');
+        console.log('✅ MariaDB Connected');
     }
 });
 

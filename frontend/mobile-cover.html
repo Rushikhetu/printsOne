@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/logos/logos.png">
+    <title>Mobile Cover Customization | PrintsOne</title>
+    <link rel="stylesheet" href="css/mobile-cover.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header/Navbar copied from home page -->
+
+    <main class="customizer-page">
+
+<input type="file" id="uploadImage" accept="image/*">
+        <div class="left-panel">
+            <h2>1. Choose Your Phone Model</h2>
+            <select id="phoneModel">
+                <option>iPhone 15 Pro</option>
+                <option>Samsung S24 Ultra</option>
+                <option>OnePlus 12</option>
+            </select>
+
+            <h2>2. Choose Cover Type</h2>
+            <div class="cover-types">
+                <button class="active">Slim Case</button>
+                <button>Tough Case</button>
+                <button>Clear Case</button>
+            </div>
+
+            <h2>3. Add Your Design</h2>
+            <input type="file" id="uploadImage" accept="image/*">
+
+            <button class="upload-btn">
+                <i class="fa-solid fa-upload"></i> Upload Image
+            </button>
+        </div>
+
+        <div class="preview-panel">
+            <div class="phone-preview">
+                <img src="assets/images/sample-cover.png" id="coverPreview" alt="Preview">
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <h3>Your Customization</h3>
+
+            <div class="price-box">
+                <p>Product Price <span>₹499</span></p>
+                <p>Customization <span>FREE</span></p>
+                <hr>
+                <p class="total">Total <span>₹499</span></p>
+            </div>
+
+            <button class="cart-btn">Add to Cart</button>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+    </main>
+
+    <script src="js/mobile-cover.js"></script>
+</body>
+</html>
