@@ -1,4 +1,103 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <link rel="icon" type="image/png" href="assets/logos/logos.png"><title>PrintsOne Login</title> <link rel="stylesheet" href="css/login.css" /> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /> </head> <body> <div class="login-wrapper"> <div class="login-card"> <!-- Logo --> <img src="assets/logos/logos.png" alt="PrintsOne" class="logo" /> <h1>Welcome Back!</h1> <p>Login to continue to PrintsOne</p> <form id="loginForm"> <div class="input-group"> <i class="fa-regular fa-user"></i> <input type="text" id="identifier" placeholder="Email or Mobile Number" required /> </div> <div class="input-group"> <i class="fa-solid fa-lock"></i> <input type="password" id="password" placeholder="Password" required /> <i class="fa-regular fa-eye toggle-password" id="togglePassword" ></i> </div> <button type="submit" class="login-btn"> Login </button> </form> <div class="divider"> <span>or</span> </div> <a href="#" class="forgot-link"> Forgot Password? </a><p class="signup-text">
-    Don’t have an account?
-    <a href="signup.html">Sign Up</a>
-</p> </div> </div> <script src="js/auth.js"></script> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" href="assets/logos/logos.png">
+
+    <title>PrintsOne Login</title>
+
+    <link rel="stylesheet" href="css/login.css" />
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+</head>
+
+<body>
+
+    <div class="login-wrapper">
+
+        <div class="login-card">
+
+            <!-- Logo -->
+            <img
+                src="assets/logos/logos.png"
+                alt="PrintsOne"
+                class="logo"
+            />
+
+            <h1>Welcome Back!</h1>
+
+            <p>Login to continue to PrintsOne</p>
+
+            <!-- Login Form -->
+            <form id="loginForm">
+
+                <!-- Email / Mobile -->
+                <div class="input-group">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    <input
+                        type="text"
+                        id="identifier"
+                        placeholder="Email or Mobile Number"
+                        required
+                    />
+
+                </div>
+
+                <!-- Password -->
+                <div class="input-group">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                        required
+                    />
+
+                    <i
+                        class="fa-regular fa-eye toggle-password"
+                        id="togglePassword"
+                    ></i>
+
+                </div>
+
+                <!-- Login Button -->
+                <button
+                    type="submit"
+                    class="login-btn"
+                >
+                    Login
+                </button>
+
+            </form>
+
+            <div class="divider">
+                <span>or</span>
+            </div>
+
+            <a href="#" class="forgot-link">
+                Forgot Password?
+            </a>
+
+            <p class="signup-text">
+                Don’t have an account?
+                <a href="signup.html">Sign Up</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- IMPORTANT: Load login.js, NOT auth.js -->
+    <script src="js/login.js"></script>
+
+</body>
+</html>
