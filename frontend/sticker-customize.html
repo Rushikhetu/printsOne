@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customize Sticker - PrintsOne</title>
+
+    <link rel="icon" type="image/png" href="assets/logos/logos.png">
+
+    <link rel="stylesheet" href="css/sticker-customize.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="navbar">
+
+    <div class="menu">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="brand">
+        <img src="assets/logos/logos.png" alt="PrintsOne">
+        <span>Prints<span>One</span></span>
+    </div>
+
+    <button class="orders-btn" onclick="location.href='orders.html'">
+        <i class="fa-solid fa-box"></i>
+        My Orders
+    </button>
+
+    <i class="fa-regular fa-bell notification"></i>
+
+    <div class="profile">
+        <span id="profileInitial">R</span>
+    </div>
+
+</header>
+
+
+<!-- ================= BREADCRUMB ================= -->
+
+<div class="breadcrumb">
+
+    <span onclick="location.href='home.html'">
+        <i class="fa-solid fa-arrow-left"></i>
+        Home
+    </span>
+
+    <i class="fa-solid fa-chevron-right"></i>
+
+    <span>Stickers</span>
+
+    <i class="fa-solid fa-chevron-right"></i>
+
+    <b>Customize</b>
+
+</div>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="page">
+
+    <!-- LEFT PANEL -->
+
+    <aside class="left-panel">
+
+        <!-- STEPS -->
+
+        <div class="steps">
+
+            <div class="step active">
+                <div class="step-number">1</div>
+                <span>Design</span>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <span>Size</span>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <span>Review</span>
+            </div>
+
+        </div>
+
+
+        <!-- ADD ELEMENTS -->
+
+        <section class="panel-section">
+
+            <h3>Add Elements</h3>
+
+            <div class="element-buttons">
+
+                <button onclick="addText()">
+                    <i class="fa-solid fa-font"></i>
+                    <span>Text</span>
+                </button>
+
+                <button onclick="document.getElementById('imageInput').click()">
+                    <i class="fa-regular fa-image"></i>
+                    <span>Image</span>
+                </button>
+
+                <button onclick="openStickerSection()">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <span>Sticker</span>
+                </button>
+
+                <button onclick="document.getElementById('imageInput').click()">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <span>Upload</span>
+                </button>
+
+            </div>
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/png,image/jpeg,image/jpg"
+                hidden
+            >
+
+        </section>
+
+
+        <!-- STICKERS -->
+
+        <section class="panel-section" id="stickerSection">
+
+            <div class="section-title">
+
+                <h3>Choose Stickers</h3>
+
+                <button onclick="showAllStickers()">
+                    View All
+                </button>
+
+            </div>
+
+
+            <div class="categories">
+
+                <button class="category active"
+                        onclick="filterStickers('all', this)">
+                    All
+                </button>
+
+                <button class="category"
+                        onclick="filterStickers('animals', this)">
+                    Animals
+                </button>
+
+                <button class="category"
+                        onclick="filterStickers('emoji', this)">
+                    Emoji
+                </button>
+
+                <button class="category"
+                        onclick="filterStickers('quotes', this)">
+                    Quotes
+                </button>
+
+                <button class="category"
+                        onclick="filterStickers('hobby', this)">
+                    Hobby
+                </button>
+
+            </div>
+
+
+            <div class="sticker-grid" id="stickerGrid"></div>
+
+        </section>
+
+
+        <!-- BACKGROUND -->
+
+        <section class="panel-section">
+
+            <h3>Background Color</h3>
+
+            <div class="color-options">
+
+                <button
+                    class="color white active"
+                    onclick="changeBackground('transparent', this)">
+                </button>
+
+                <button
+                    class="color transparent"
+                    onclick="changeBackground('transparent', this)">
+                </button>
+
+                <button
+                    class="color black"
+                    onclick="changeBackground('#000000', this)">
+                </button>
+
+                <button
+                    class="color pink"
+                    onclick="changeBackground('#ff4da6', this)">
+                </button>
+
+                <button
+                    class="color purple"
+                    onclick="changeBackground('#6224e8', this)">
+                </button>
+
+                <button
+                    class="color blue"
+                    onclick="changeBackground('#3297db', this)">
+                </button>
+
+                <button
+                    class="color green"
+                    onclick="changeBackground('#54d8a0', this)">
+                </button>
+
+                <button
+                    class="color yellow"
+                    onclick="changeBackground('#ffd34e', this)">
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- BORDER -->
+
+        <section class="panel-section">
+
+            <div class="border-header">
+
+                <h3>Border</h3>
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        id="borderToggle"
+                        checked
+                        onchange="toggleBorder()"
+                    >
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <label class="small-label">Border Color</label>
+
+            <div class="border-colors">
+
+                <button onclick="changeBorderColor('#000000')"></button>
+                <button onclick="changeBorderColor('#aaaaaa')"></button>
+                <button onclick="changeBorderColor('#ffffff')"></button>
+                <button onclick="changeBorderColor('#ff2222')"></button>
+                <button onclick="changeBorderColor('#6224e8')"></button>
+                <button onclick="changeBorderColor('#2455e8')"></button>
+                <button onclick="changeBorderColor('#15ad65')"></button>
+
+            </div>
+
+
+            <div class="range-title">
+
+                <span>Border Width</span>
+
+                <span id="borderWidthValue">4px</span>
+
+            </div>
+
+            <input
+                type="range"
+                id="borderWidth"
+                min="0"
+                max="15"
+                value="4"
+                oninput="changeBorderWidth(this.value)"
+            >
+
+        </section>
+
+    </aside>
+
+
+    <!-- CENTER -->
+
+    <section class="workspace">
+
+        <div class="workspace-header">
+
+            <div>
+
+                <h1>Customize Your Sticker</h1>
+
+                <p>Design your own sticker the way you want</p>
+
+            </div>
+
+            <div class="workspace-actions">
+
+                <button onclick="saveDesign()">
+                    Save Design
+                </button>
+
+                <button class="heart-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- TOOLBAR -->
+
+        <div class="toolbar">
+
+            <button onclick="undo()">
+                <i class="fa-solid fa-rotate-left"></i>
+                Undo
+            </button>
+
+            <button onclick="redo()">
+                <i class="fa-solid fa-rotate-right"></i>
+                Redo
+            </button>
+
+            <button onclick="zoomOut()">
+                <i class="fa-solid fa-magnifying-glass-minus"></i>
+                Zoom Out
+            </button>
+
+            <button onclick="zoomIn()">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                Zoom In
+            </button>
+
+            <button onclick="resetDesign()">
+                <i class="fa-solid fa-arrow-rotate-right"></i>
+                Reset
+            </button>
+
+        </div>
+
+
+        <!-- CANVAS -->
+
+        <div class="canvas-area" id="canvasArea">
+
+            <div
+                id="stickerCanvas"
+                class="sticker-canvas"
+            >
+
+                <div
+                    id="designBorder"
+                    class="design-border"
+                >
+
+                    <div
+                        id="designContent"
+                        class="design-content"
+                    >
+                        🐼
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PREVIEW -->
+
+        <button class="preview-btn" onclick="previewDesign()">
+
+            <i class="fa-regular fa-eye"></i>
+
+            Preview
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- ================= BOTTOM ================= -->
+
+<footer class="bottom-bar">
+
+    <div class="info-box">
+
+        <i class="fa-regular fa-copy"></i>
+
+        <div>
+            <small>Size</small>
+            <strong id="sizeText">Medium (3 x 3 in)</strong>
+        </div>
+
+    </div>
+
+
+    <div class="info-box">
+
+        <i class="fa-solid fa-layer-group"></i>
+
+        <div>
+            <small>Quantity</small>
+
+            <select id="quantity" onchange="updatePrice()">
+                <option value="10">10 Stickers</option>
+                <option value="20">20 Stickers</option>
+                <option value="50">50 Stickers</option>
+                <option value="100">100 Stickers</option>
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <div class="price-box">
+
+        <small>Price</small>
+
+        <strong id="price">
+            ₹199.00
+        </strong>
+
+    </div>
+
+
+    <button
+        class="cart-btn"
+        onclick="addToCart()"
+    >
+        <i class="fa-solid fa-cart-shopping"></i>
+        Add to Cart
+    </button>
+
+</footer>
+
+
+<script src="js/sticker-customize.js"></script>
+
+</body>
+</html>

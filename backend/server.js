@@ -3,11 +3,18 @@ require('./config/db');
 
 const express = require('express');
 const cors = require('cors');
+const db = require('./config/db');
 
 const authRoutes = require('./routes/authRoutes');
 
 const app = express();
+const stickerRoutes =
+    require("./routes/stickerRoutes");
 
+app.use(
+    "/api/stickers",
+    stickerRoutes
+);
 // Allow frontend requests
 app.use(cors({
     origin: '*'
