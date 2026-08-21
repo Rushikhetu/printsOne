@@ -15,6 +15,13 @@ app.use(
     "/api/stickers",
     stickerRoutes
 );
+const posterRoutes =
+    require("./routes/posterRoutes");
+
+app.use(
+    "/api/posters",
+    posterRoutes
+);
 // Allow frontend requests
 app.use(cors({
     origin: '*'

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Posters - PrintsOne</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/logos/logos.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/posters.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="brand">
+
+        <img
+            src="assets/logos/logos.png"
+            alt="PrintsOne"
+        >
+
+        <div class="brand-text">
+
+            <h1>
+                Prints<span>One</span>
+            </h1>
+
+            <p>
+                Your Imagination, Our Prints
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for posters, stickers..."
+        >
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+    </div>
+
+
+    <!-- HEADER ACTIONS -->
+
+    <div class="header-actions">
+
+        <button
+            class="cart-icon"
+            onclick="openCart()"
+        >
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span id="cartCount">
+                0
+            </span>
+
+        </button>
+
+
+        <button class="icon-button">
+
+            <i class="fa-regular fa-bell"></i>
+
+        </button>
+
+
+        <div
+            class="profile-circle"
+            id="profileInitial"
+        >
+            R
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav class="navigation">
+
+    <a href="home.html">
+
+        <i class="fa-solid fa-house"></i>
+
+        <span>
+            Home
+        </span>
+
+    </a>
+
+
+    <a href="orders.html">
+
+        <i class="fa-solid fa-box"></i>
+
+        <span>
+            My Orders
+        </span>
+
+    </a>
+
+
+    <a href="bookings.html">
+
+        <i class="fa-regular fa-calendar-check"></i>
+
+        <span>
+            My Bookings
+        </span>
+
+    </a>
+
+
+    <a href="wallet.html">
+
+        <i class="fa-solid fa-wallet"></i>
+
+        <span>
+            My Wallet
+        </span>
+
+    </a>
+
+
+    <a href="sticker-customize.html">
+
+        <i class="fa-regular fa-face-smile"></i>
+
+        <span>
+            Stickers
+        </span>
+
+    </a>
+
+
+    <a
+        href="posters.html"
+        class="active"
+    >
+
+        <i class="fa-regular fa-image"></i>
+
+        <span>
+            Posters
+        </span>
+
+    </a>
+
+
+    <a href="custom-orders.html">
+
+        <i class="fa-regular fa-file-lines"></i>
+
+        <span>
+            Custom Orders
+        </span>
+
+    </a>
+
+
+    <a href="addresses.html">
+
+        <i class="fa-solid fa-location-dot"></i>
+
+        <span>
+            Addresses
+        </span>
+
+    </a>
+
+
+    <a href="settings.html">
+
+        <i class="fa-solid fa-gear"></i>
+
+        <span>
+            Settings
+        </span>
+
+    </a>
+
+
+    <a href="help.html">
+
+        <i class="fa-regular fa-circle-question"></i>
+
+        <span>
+            Help & Support
+        </span>
+
+    </a>
+
+</nav>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="main">
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h2>
+                Bring Your Walls
+                <br>
+
+                <span>
+                    To Life!
+                </span>
+            </h2>
+
+
+            <p>
+                Premium posters and stickers
+                <br>
+                for every vibe.
+            </p>
+
+
+            <button onclick="scrollToPosters()">
+
+                Explore Now
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <img
+                src="assets/posters/hero-poster.jpg"
+                alt="Poster"
+                onerror="this.style.display='none'"
+            >
+
+        </div>
+
+
+        <button
+            class="hero-arrow left"
+            onclick="previousHero()"
+        >
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+
+        <button
+            class="hero-arrow right"
+            onclick="nextHero()"
+        >
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+
+        <div class="hero-dots">
+
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BENEFITS ================= -->
+
+    <section class="benefits">
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div>
+
+                <h3>
+                    Premium Quality
+                </h3>
+
+                <p>
+                    High resolution,
+                    <br>
+                    fade resistant prints
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+                <i class="fa-solid fa-truck"></i>
+            </div>
+
+            <div>
+
+                <h3>
+                    Fast Delivery
+                </h3>
+
+                <p>
+                    Quick and safe
+                    <br>
+                    delivery at your door
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+                <i class="fa-solid fa-award"></i>
+            </div>
+
+            <div>
+
+                <h3>
+                    Best Prices
+                </h3>
+
+                <p>
+                    Affordable prices
+                    <br>
+                    for everyone
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+
+            <div>
+
+                <h3>
+                    24/7 Support
+                </h3>
+
+                <p>
+                    We're here to help
+                    <br>
+                    you anytime
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="category-section">
+
+        <div class="section-heading">
+
+            <h2>
+                Shop by Category
+            </h2>
+
+            <button onclick="showAllPosters()">
+                View All
+            </button>
+
+        </div>
+
+
+        <div class="categories">
+
+            <button
+                class="category-card active"
+                onclick="filterCategory('all', this)"
+            >
+
+                <div class="category-image all-category">
+
+                    <i class="fa-regular fa-image"></i>
+
+                </div>
+
+                <span>
+                    All
+                </span>
+
+            </button>
+
+
+            <button
+                class="category-card"
+                onclick="filterCategory('Motivational', this)"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="assets/posters/focus-discipline.jpg"
+                        alt="Motivational"
+                    >
+
+                </div>
+
+                <span>
+                    Motivational
+                </span>
+
+            </button>
+
+
+            <button
+                class="category-card"
+                onclick="filterCategory('Anime', this)"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="assets/posters/naruto.jpg"
+                        alt="Anime"
+                    >
+
+                </div>
+
+                <span>
+                    Anime
+                </span>
+
+            </button>
+
+
+            <button
+                class="category-card"
+                onclick="filterCategory('Movies', this)"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="assets/posters/joker.jpg"
+                        alt="Movies"
+                    >
+
+                </div>
+
+                <span>
+                    Movies
+                </span>
+
+            </button>
+
+
+            <button
+                class="category-card"
+                onclick="filterCategory('Nature', this)"
+            >
+
+                <div class="category-image">
+
+                    <img
+                        src="assets/posters/nature.jpg"
+                        alt="Nature"
+                    >
+
+                </div>
+
+                <span>
+                    Nature
+                </span>
+
+            </button>
+
+
+            <button
+                class="category-card"
+                onclick="filterCategory('Sports', this)"
+            >
+
+                <div class="category-image sports-placeholder">
+
+                    <i class="fa-solid fa-futbol"></i>
+
+                </div>
+
+                <span>
+                    Sports
+                </span>
+
+            </button>
+
+
+            <button
+                class="category-card"
+                onclick="filterCategory('Minimal', this)"
+            >
+
+                <div class="category-image minimal-placeholder">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                </div>
+
+                <span>
+                    Minimal
+                </span>
+
+            </button>
+
+
+            <button
+                class="category-card"
+                onclick="filterCategory('Art', this)"
+            >
+
+                <div class="category-image art-placeholder">
+
+                    <i class="fa-solid fa-palette"></i>
+
+                </div>
+
+                <span>
+                    Art
+                </span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= POPULAR POSTERS ================= -->
+
+    <section
+        class="poster-section"
+        id="postersSection"
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Popular Posters
+            </h2>
+
+            <button onclick="showAllPosters()">
+                View All
+            </button>
+
+        </div>
+
+
+        <div
+            class="poster-grid"
+            id="posterGrid"
+        >
+
+            <div class="loading">
+                Loading posters...
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CUSTOM ORDER ================= -->
+
+    <section class="custom-order">
+
+        <div class="custom-icon">
+
+            <i class="fa-solid fa-gift"></i>
+
+        </div>
+
+
+        <div class="custom-text">
+
+            <h2>
+                Create Something Unique!
+            </h2>
+
+            <p>
+                Custom orders made just for you.
+            </p>
+
+        </div>
+
+
+        <button onclick="location.href='custom-orders.html'">
+
+            Create Custom Order
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- ================= CART MODAL ================= -->
+
+<div
+    class="cart-modal"
+    id="cartModal"
+>
+
+    <div class="cart-box">
+
+        <button
+            class="close-cart"
+            onclick="closeCart()"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <h2>
+            Your Cart
+        </h2>
+
+        <div id="cartItems">
+            Loading...
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="js/posters.js"></script>
+
+</body>
+
+</html>
