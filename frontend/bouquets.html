@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PrintsOne - Bouquets</title>
+
+    <link rel="icon" type="image/png" href="assets/logos/logos.png">
+
+    <link rel="stylesheet" href="css/bouquets.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="brand">
+
+        <img src="assets/logos/logos.png" alt="PrintsOne">
+
+        <div>
+            <h1>Prints<span>One</span></h1>
+            <p>Your Imagination, Our Prints</p>
+        </div>
+
+    </div>
+
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for bouquets, flowers..."
+        >
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+    </div>
+
+
+    <div class="header-actions">
+
+        <button class="cart-icon" onclick="openCart()">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span id="cartCount">0</span>
+
+        </button>
+
+        <button class="icon-btn">
+
+            <i class="fa-regular fa-bell"></i>
+
+        </button>
+
+        <div class="profile" id="profileInitial">
+            R
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav class="navigation">
+
+    <a href="home.html">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+    </a>
+
+    <a href="orders.html">
+        <i class="fa-solid fa-box"></i>
+        <span>My Orders</span>
+    </a>
+
+    <a href="bookings.html">
+        <i class="fa-regular fa-calendar-check"></i>
+        <span>My Bookings</span>
+    </a>
+
+    <a href="wallet.html">
+        <i class="fa-solid fa-wallet"></i>
+        <span>My Wallet</span>
+    </a>
+
+    <a href="bouquets.html" class="active">
+        <i class="fa-regular fa-sun"></i>
+        <span>Bouquets</span>
+    </a>
+
+    <a href="posters.html">
+        <i class="fa-regular fa-image"></i>
+        <span>Posters</span>
+    </a>
+
+    <a href="custom-orders.html">
+        <i class="fa-regular fa-calendar"></i>
+        <span>Custom Orders</span>
+    </a>
+
+    <a href="addresses.html">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Addresses</span>
+    </a>
+
+    <a href="settings.html">
+        <i class="fa-solid fa-gear"></i>
+        <span>Settings</span>
+    </a>
+
+    <a href="help.html">
+        <i class="fa-regular fa-circle-question"></i>
+        <span>Help & Support</span>
+    </a>
+
+</nav>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <button class="hero-arrow left" onclick="previousHero()">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <span class="hero-label">
+                FRESH FLOWERS, HAND-ARRANGED
+            </span>
+
+            <h2>
+                Express Your Love
+                <br>
+                With <span>Beautiful Bouquets</span>
+            </h2>
+
+            <p>
+                Handpicked blooms for every occasion.
+                <br>
+                Delivered with care & love.
+            </p>
+
+            <button class="shop-btn" onclick="scrollToBouquets()">
+                Shop Now
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+
+            <div class="hero-features">
+
+                <div>
+                    <i class="fa-regular fa-sun"></i>
+                    <span>
+                        <b>Fresh & Premium</b>
+                        Flowers
+                    </span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-truck"></i>
+                    <span>
+                        <b>Same Day</b>
+                        Delivery
+                    </span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>
+                        <b>Safe & Secure</b>
+                        Payments
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <img
+                id="heroImage"
+                src="assets/bouquets/pink-bouquet.png"
+                alt="Beautiful Bouquet"
+            >
+
+        </div>
+
+    </div>
+
+
+    <button class="hero-arrow right" onclick="nextHero()">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+
+    <div class="hero-dots">
+
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     OCCASIONS
+===================================================== -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <h2>Shop by Occasion</h2>
+
+        <button onclick="loadAllBouquets()">
+            View All
+        </button>
+
+    </div>
+
+
+    <div class="occasion-list">
+
+        <div class="occasion" onclick="filterOccasion('Love & Romance')">
+
+            <img src="assets/bouquets/red-bouquet.png">
+
+            <h3>Love & Romance</h3>
+
+        </div>
+
+
+        <div class="occasion" onclick="filterOccasion('Birthday')">
+
+            <img src="assets/bouquets/birthday-bouquet.png">
+
+            <h3>Birthday</h3>
+
+        </div>
+
+
+        <div class="occasion" onclick="filterOccasion('Anniversary')">
+
+            <img src="assets/bouquets/yellow-bouquet.png">
+
+            <h3>Anniversary</h3>
+
+        </div>
+
+
+        <div class="occasion" onclick="filterOccasion('Congratulations')">
+
+            <img src="assets/bouquets/pink-bouquet.png">
+
+            <h3>Congratulations</h3>
+
+        </div>
+
+
+        <div class="occasion" onclick="filterOccasion('Sympathy')">
+
+            <img src="assets/bouquets/white-bouquet.png">
+
+            <h3>Sympathy</h3>
+
+        </div>
+
+
+        <div class="occasion" onclick="filterOccasion('Thank You')">
+
+            <img src="assets/bouquets/colorful-bouquet.png">
+
+            <h3>Thank You</h3>
+
+        </div>
+
+
+        <div class="occasion" onclick="filterOccasion('Just Because')">
+
+            <img src="assets/bouquets/pink-bouquet.png">
+
+            <h3>Just Because</h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     POPULAR BOUQUETS
+===================================================== -->
+
+<section class="section" id="bouquetSection">
+
+    <div class="section-heading">
+
+        <h2>Popular Bouquets</h2>
+
+        <button onclick="loadAllBouquets()">
+            View All
+        </button>
+
+    </div>
+
+
+    <div
+        class="bouquet-grid"
+        id="bouquetGrid">
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROMOTION
+===================================================== -->
+
+<section class="promotion">
+
+    <div class="promotion-item">
+
+        <div class="promotion-icon">
+            <i class="fa-regular fa-calendar-plus"></i>
+        </div>
+
+        <div>
+
+            <h3>Same Day Delivery!</h3>
+
+            <p>
+                Order before 4 PM and get it delivered today.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="promotion-divider"></div>
+
+
+    <div class="promotion-item">
+
+        <div class="promotion-icon">
+            <i class="fa-solid fa-gift"></i>
+        </div>
+
+        <div>
+
+            <h3>10% Off on First Order</h3>
+
+            <p>
+                Use Code:
+                <b>WELCOME10</b>
+            </p>
+
+        </div>
+
+        <button onclick="scrollToBouquets()">
+            Order Now
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     WHY CHOOSE US
+===================================================== -->
+
+<section class="why-us">
+
+    <h2>Why Choose Us</h2>
+
+
+    <div class="why-grid">
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                <i class="fa-regular fa-sun"></i>
+            </div>
+
+            <div>
+                <h3>Farm Fresh Flowers</h3>
+                <p>
+                    Handpicked from the best farms.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                <i class="fa-solid fa-truck"></i>
+            </div>
+
+            <div>
+                <h3>Timely Delivery</h3>
+                <p>
+                    On-time delivery, every time.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div>
+                <h3>Secure Payments</h3>
+                <p>
+                    100% safe & secure transactions.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+
+            <div>
+                <h3>24/7 Support</h3>
+                <p>
+                    We're here to help you anytime.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="js/bouquets.js"></script>
+
+</body>
+</html>

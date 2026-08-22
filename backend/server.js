@@ -22,6 +22,13 @@ app.use(
     "/api/posters",
     posterRoutes
 );
+const bouquetRoutes =
+    require("./routes/bouquetRoutes");
+
+app.use(
+    "/api/bouquets",
+    bouquetRoutes
+);
 // Allow frontend requests
 app.use(cors({
     origin: '*'
